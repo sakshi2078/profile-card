@@ -1,0 +1,128 @@
+body{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    height: 100vh;
+    background-color: wheat;
+    background-size: cover;
+    background-position: center;
+    object-fit: cover;
+    display: flex;
+    align-items: center;
+}
+.me{
+    margin: auto;
+    background-color: honeydew;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
+    position: absolute;
+    border-radius: 25px;
+    width: 200px;
+    height: 270px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+}
+.me .picture{
+    display: inline-block;
+    height: 50%;
+    width: 50%;
+    border-radius: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    z-index: 1;
+    position: absolute;
+}
+.me .picture::before{
+    content: "";
+    width: 100%;
+    height: 0;
+    border-radius: 50%;
+    background-color: rgb(54, 164, 168);
+    position: absolute;
+    bottom: 135%;
+    right: 0;
+    left: 0;
+    opacity: 0.9;
+    transform: scale(3);
+    transition: all 0.3s linear 0s;
+}
+.me:hover .picture::before{
+    height: 100%;
+}
+.me .picture::after{
+    content: "";
+    width: 100%;
+    height: 80%;
+    border-radius: 50%;
+    margin-top: 20.5%;
+    background-color: gold;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+.me .picture img{
+    width: 100%;
+    height: 80%;
+    margin-top: 20%;
+    border-radius: 50%;
+    transform: scale(1);
+    transition: all 0.9s ease 0s;
+}    
+.me:hover .picture img{
+    box-shadow: 0 0 0 12px #f7f5ec;
+    transform: scale(0.7);
+}
+.me h3{
+    display: block;
+    font-size: 18px;
+    color: rgb(65, 62, 62);
+    text-transform: capitalize;
+    text-align: center;
+    justify-content: center;
+    margin-top: 80%;
+}
+.me h4{
+    display: block;
+    font-size: 12px;
+    color: #4e5052;
+    text-transform: capitalize;
+    text-align: center;
+    margin-top: 0;
+}
+.me p{
+    display: block;
+    text-align: center;
+    margin-top: 0;
+    color: #4e5052;
+    font-size: 10px;
+}
+.me .social{
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    background-color: sandybrown;
+    position: absolute;
+    bottom: -100px;
+    left: 0;
+    transition: all 0.5s ease 0s;
+}
+.me:hover .social{
+    bottom: 0;
+}
+.me .social li{
+    display: inline-block;
+}
+.me .social li a{
+    display: block;
+    padding: 10px;
+    font-size: 17px;
+    color: white;
+    transition: all 0.3s ease 0s;
+    text-decoration: none;
+}
+.me .social li a:hover{
+    color: black;
+    background-color: #f7f5ec;
+}
