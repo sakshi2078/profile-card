@@ -110,6 +110,7 @@ body{
 }
 .me:hover .social{
     bottom: 0;
+    cursor: pointer;
 }
 .me .social li{
     display: inline-block;
